@@ -6,6 +6,7 @@ pipeline {
         stage('Development') {
             steps {
                 echo 'Hello World - Development'
+                bat 'cd "C:\\Users\\offic\\Downloads\\Training"'
                 bat 'git clone "https://github.com/animagus12/jenkins-workshop.git"'
             }
         }
@@ -13,8 +14,8 @@ pipeline {
         stage('QA') {
             steps {
                 echo 'Hello World - QA'
-                cd "C:/Users/offic/Downloads/Training"
-                mkdir "Apple Folder"
+                bat 'cd "C:\\Users\\offic\\Downloads\\Training"'
+                bat 'mkdir "Apple Folder"'
             }
         }
         
