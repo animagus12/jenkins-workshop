@@ -6,16 +6,25 @@ pipeline {
         stage('Development') {
             steps {
                 echo 'Hello World - Development'
-                bat 'cd "C:\\Users\\offic\\Downloads\\Training"'
-                bat 'git clone "https://github.com/animagus12/jenkins-workshop.git"'
+                // bat 'cd "C:\\Users\\offic\\Downloads\\Training"'
+                // bat 'git clone "https://github.com/animagus12/jenkins-workshop.git"'
             }
         }
         
         stage('QA') {
             steps {
                 echo 'Hello World - QA'
-                bat 'cd "C:\\Users\\offic\\Downloads\\Training"'
-                bat 'mkdir "Apple Folder"'
+                script {
+                    // Define the folder path
+                    def folderPath = "C:/Users/sheen/OneDrive/Desktop/handson-assesment-Shivansh070"
+
+                    // Create the folder if it doesn't exist
+                    if (!fileExists(folderPath)) {
+                        sh "mkdir -p ${folderPath}"
+                        echo "Folder created at ${folderPath}"
+                    } else {
+                        echo "Folder already exists at ${folderPath}"
+                    }
             }
         }
         
