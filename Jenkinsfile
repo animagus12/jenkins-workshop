@@ -25,6 +25,7 @@ pipeline {
                     } else {
                         echo "Folder already exists at ${folderPath}"
                     }
+                }
             }
         }
         
