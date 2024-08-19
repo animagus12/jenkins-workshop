@@ -13,6 +13,8 @@ pipeline {
         stage('QA') {
             steps {
                 echo 'Hello World - QA'
+                cd "C:\Users\offic\Downloads\Training"
+                mkdir "Apple Folder"
             }
         }
         
