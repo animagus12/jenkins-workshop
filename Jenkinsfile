@@ -16,7 +16,7 @@ pipeline {
                 echo 'Hello World - QA'
                 script {
                     // Define the folder path
-                    def folderPath = "C:\Users\offic\Downloads\Training"
+                    def folderPath = "C:/Users/offic/Downloads/Training"
 
                     // Create the folder if it doesn't exist
                     if (!fileExists(folderPath)) {
